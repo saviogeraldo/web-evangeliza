@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Evangeliza Web</title>
-  </head>
-  <body>
-    <h1>Evangeliza Web</h1>
-    <p>Digite uma situação:</p>
-    <input id="entrada" type="text">
-    <button onclick="buscar()">Buscar</button>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evangeliza Web</title>
+</head>
+<body>
+  <h1>Evangeliza Web</h1>
+  <p>Digite uma situação que você está enfrentando (ex: tristeza, culpa, fé, esperança...)</p>
 
-    <h2>Versículo:</h2>
-    <div id="versiculo"></div>
+  <input id="entrada" type="text" placeholder="Digite aqui..." />
+  <br />
+  <button onclick="buscar()">Buscar</button>
+  <button onclick="compartilharWhatsApp()">Compartilhar no WhatsApp</button>
 
-    <h2>Consolo:</h2>
-    <div id="consolo"></div>
+  <div id="versiculo"></div>
+  <div id="consolo"></div>
 
-    <script src="js/script.js"></script>
-
-    <button onclick="compartilharWhatsApp()">Compartilhar no WhatsApp</button>
-  </body>
+  <script src="/js/script.js"></script>
+</body>
 </html>
