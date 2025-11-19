@@ -1,23 +1,28 @@
-/* Reset e estrutura básica */
+/* Reset e fundo */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: 'Arial', sans-serif;
-  color: #fff;
-  background-color: #000;
 }
 
-/* Hero: tela inicial com fundo */
+body {
+  background: url('img/imagem-principal.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+/* Hero: tela inicial */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  height: 100dvh;
+  height: 100vh;      /* fallback */
+  height: 100dvh;     /* altura dinâmica (Android + iOS modernos) */
   width: 100%;
-  background: url('img/imagem-principal.jpeg') center center / cover no-repeat;
   background-color: #000000ee;
   overflow: hidden;
   box-sizing: border-box;
@@ -51,26 +56,17 @@ html, body {
   50% { opacity: 0.5; }
 }
 
-/* Tópicos com fundo */
-section.topico {
-  background: url('img/imagem-principal.jpeg') center center fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 60px 20px;
-  color: #fff;
-  text-align: center;
-  backdrop-filter: blur(2px);
-  box-sizing: border-box;
+/* Conteúdo geral */
+.conteudo {
+  position: relative;
+  z-index: 3;
 }
 
-/* Filtro escuro dentro dos tópicos */
-section.topico .filtro-escuro {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px 20px;
-  border-radius: 12px;
-  max-width: 900px;
-  margin: 0 auto;
+.filtro-escuro {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+  backdrop-filter: blur(2px);
+  padding: 60px 20px;
+  text-align: center;
 }
 
 /* Título e subtítulo */
@@ -124,8 +120,8 @@ button.surpreenda:hover {
   box-shadow: 0 0 14px #ffffffaa;
 }
 
-/* Tópicos: títulos, versículos e textos */
-section.topico h2 {
+/* Páginas de temas */
+h2 {
   text-align: center;
   font-size: 2em;
   color: #fff;
@@ -133,7 +129,7 @@ section.topico h2 {
   text-shadow: 0 0 8px #000;
 }
 
-section.topico blockquote {
+blockquote {
   text-align: center;
   font-style: italic;
   font-size: 1.8em;
@@ -144,7 +140,7 @@ section.topico blockquote {
   padding: 0 25px;
 }
 
-section.topico .consolo {
+.consolo {
   text-align: center;
   margin-top: 30px;
   font-size: 1.7em;
@@ -189,17 +185,17 @@ a:hover {
     padding: 0 15px;
   }
 
-  section.topico h2 {
+  h2 {
     font-size: 1.8em;
   }
 
-  section.topico blockquote {
+  blockquote {
     font-size: 1.6em;
     line-height: 1.7;
     padding: 0 20px;
   }
 
-  section.topico .consolo {
+  .consolo {
     font-size: 1.6em;
     line-height: 1.7;
     padding: 0 20px;
