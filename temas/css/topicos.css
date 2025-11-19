@@ -1,3 +1,4 @@
+/* Container principal dos tópicos */
 section.topico {
   display: flex;
   flex-direction: column;
@@ -9,52 +10,48 @@ section.topico {
   text-align: center;
 }
 
+/* Título do tópico */
 section.topico h2 {
-  font-size: 2.6em;
+  font-size: clamp(1.8em, 5vw, 2.6em);
   margin-bottom: 20px;
   text-shadow: 0 0 8px #000;
 }
 
+/* Versículo */
 section.topico blockquote {
-  font-size: 1.9em;
+  font-size: clamp(1.6em, 4.5vw, 2em);
   line-height: 1.8;
   max-width: 900px;
   margin: 20px auto;
   color: #ddd;
 }
 
+/* Texto de reflexão/consolo */
 section.topico .consolo {
-  font-size: 1.8em;
+  font-size: clamp(1.5em, 4.5vw, 1.9em);
   line-height: 1.8;
   max-width: 900px;
   margin: 20px auto 30px;
 }
 
+/* Botões e links */
 section.topico button,
 section.topico a {
-  font-size: 18px;
-  padding: 16px 28px;
+  font-size: clamp(1em, 3.5vw, 1.2em);
+  padding: clamp(12px, 3vw, 16px) clamp(18px, 5vw, 28px);
   border-radius: 8px;
   margin: 20px auto;
   text-align: center;
+  background: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Ajuste exclusivo para celular */
-@media (max-width: 768px) {
-  section.topico h2 {
-    font-size: 2.2em;
-  }
-  section.topico blockquote {
-    font-size: 1.7em;
-  }
-  section.topico .consolo {
-    font-size: 1.6em;
-  }
-  section.topico button,
-  section.topico a {
-    width: 100%;
-    max-width: 300px;
-    font-size: 17px;
-    padding: 14px 22px;
-  }
+section.topico button:hover,
+section.topico a:hover {
+  background: #666;
+  box-shadow: 0 0 10px #ffffff33;
 }
