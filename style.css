@@ -1,3 +1,4 @@
+/* Reset e fundo */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,6 +11,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
 }
 
 /* Hero: imagem de entrada */
@@ -19,10 +22,6 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #000000ee;
-}
-
-.hero img {
-  display: none; /* já usamos como fundo no body */
 }
 
 .hero-overlay {
@@ -40,17 +39,19 @@ body {
 }
 
 .hero-title {
-  font-size: 3em;
+  font-size: 3.5em;
   color: #fff;
   text-shadow: 0 0 10px #000, 0 0 20px #000;
   margin: 0;
 }
 
+/* Ícone de rolagem */
 .scroll-down {
   font-size: 2em;
   color: #fff;
   text-decoration: none;
   animation: pulse 2s infinite;
+  margin-top: 20px;
 }
 
 @keyframes pulse {
@@ -58,7 +59,7 @@ body {
   50% { opacity: 0.5; }
 }
 
-/* Conteúdo com filtro escuro */
+/* Conteúdo geral */
 .conteudo {
   position: relative;
   z-index: 3;
@@ -67,21 +68,20 @@ body {
 .filtro-escuro {
   background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
   backdrop-filter: blur(2px);
-  padding: 40px 20px;
-  color: #ffffffd4;
+  padding: 60px 20px;
   text-align: center;
 }
 
 /* Título e subtítulo */
 .intro {
-  font-size: 1.6em;
+  font-size: 1.8em;
   margin-bottom: 10px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
                0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .subintro {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-bottom: 30px;
 }
 
@@ -98,12 +98,12 @@ button {
   background: #444;
   color: #fff;
   border: none;
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 14px 28px;
+  font-size: 17px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  width: 220px;
+  width: 240px;
 }
 
 button:hover {
@@ -111,7 +111,6 @@ button:hover {
   box-shadow: 0 0 10px #ffffff33, 0 0 20px #ffffff22;
 }
 
-/* Botão “Surpreenda-me” em branco */
 button.surpreenda {
   background-color: #ffffff;
   color: #000000;
@@ -124,39 +123,10 @@ button.surpreenda:hover {
   box-shadow: 0 0 14px #ffffffaa;
 }
 
-/* Responsivo para celular */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2em;
-  }
-
-  .intro {
-    font-size: 1.2em;
-    padding: 0 15px;
-  }
-
-  .subintro {
-    font-size: 1em;
-    padding: 0 15px;
-  }
-
-  .botoes {
-    flex-direction: column;
-    gap: 10px;
-    padding: 0 20px;
-  }
-
-  button {
-    width: 100%;
-    font-size: 15px;
-    padding: 10px 16px;
-  }
-}    
-
-/* Estilo para páginas de temas */
+/* Páginas de temas */
 h2 {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.2em;
   color: #fff;
   margin-bottom: 20px;
   text-shadow: 0 0 8px #000;
@@ -165,25 +135,25 @@ h2 {
 blockquote {
   text-align: center;
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #ddd;
-  margin: 20px auto;
+  margin: 30px auto;
   max-width: 800px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .consolo {
   text-align: center;
-  margin-top: 20px;
-  font-size: 1.2em;
+  margin-top: 30px;
+  font-size: 1.3em;
   color: #fff;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Botão de compartilhar e link voltar */
+/* Botão compartilhar e link voltar */
 button, a {
   display: block;
   margin: 20px auto;
@@ -198,4 +168,39 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.4em;
+  }
+
+  .intro {
+    font-size: 1.4em;
+    padding: 0 15px;
+  }
+
+  .subintro {
+    font-size: 1.1em;
+    padding: 0 15px;
+  }
+
+  .botoes {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  blockquote,
+  .consolo {
+    font-size: 1.1em;
+    padding: 0 15px;
+  }
 }
