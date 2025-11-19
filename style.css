@@ -1,28 +1,23 @@
-/* Reset e fundo */
+/* Reset e estrutura básica */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-}
-
-body {
-  background: url('img/imagem-principal.jpeg') no-repeat center center fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   font-family: 'Arial', sans-serif;
   color: #fff;
+  background-color: #000;
 }
 
-/* Hero: tela inicial */
+/* Hero: tela inicial com fundo */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;      /* fallback */
-  height: 100dvh;     /* altura dinâmica (Android + iOS modernos) */
+  height: 100vh;
+  height: 100dvh;
   width: 100%;
+  background: url('img/imagem-principal.jpeg') center center / cover no-repeat;
   background-color: #000000ee;
   overflow: hidden;
   box-sizing: border-box;
@@ -43,7 +38,6 @@ body {
   text-shadow: 0 0 10px #000, 0 0 20px #000;
 }
 
-/* Ícone de rolagem */
 .scroll-down {
   font-size: 2em;
   color: #fff;
@@ -57,17 +51,26 @@ body {
   50% { opacity: 0.5; }
 }
 
-/* Conteúdo geral */
-.conteudo {
-  position: relative;
-  z-index: 3;
+/* Tópicos com fundo */
+section.topico {
+  background: url('img/imagem-principal.jpeg') center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  box-sizing: border-box;
 }
 
-.filtro-escuro {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
-  backdrop-filter: blur(2px);
-  padding: 60px 20px;
-  text-align: center;
+/* Filtro escuro dentro dos tópicos */
+section.topico .filtro-escuro {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Título e subtítulo */
@@ -121,34 +124,36 @@ button.surpreenda:hover {
   box-shadow: 0 0 14px #ffffffaa;
 }
 
-/* Páginas de temas */
-h2 {
+/* Tópicos: títulos, versículos e textos */
+section.topico h2 {
   text-align: center;
-  font-size: 2em;       /* maior para títulos */
+  font-size: 2em;
   color: #fff;
   margin-bottom: 20px;
   text-shadow: 0 0 8px #000;
 }
 
-blockquote {
+section.topico blockquote {
   text-align: center;
   font-style: italic;
-  font-size: 1.8em;     /* versículos maiores */
+  font-size: 1.8em;
   color: #ddd;
   margin: 30px auto;
   max-width: 900px;
   line-height: 1.8;
+  padding: 0 25px;
 }
 
-.consolo {
+section.topico .consolo {
   text-align: center;
   margin-top: 30px;
-  font-size: 1.7em;     /* texto explicativo maior */
+  font-size: 1.7em;
   color: #fff;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.8;
+  padding: 0 25px;
 }
 
 /* Botão compartilhar e link voltar */
@@ -168,7 +173,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsivo para celular (Android + iOS) */
+/* Responsivo para celular */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.8em;
@@ -184,17 +189,17 @@ a:hover {
     padding: 0 15px;
   }
 
-  h2 {
+  section.topico h2 {
     font-size: 1.8em;
   }
 
-  blockquote {
+  section.topico blockquote {
     font-size: 1.6em;
     line-height: 1.7;
     padding: 0 20px;
   }
 
-  .consolo {
+  section.topico .consolo {
     font-size: 1.6em;
     line-height: 1.7;
     padding: 0 20px;
