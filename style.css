@@ -124,7 +124,7 @@ button.surpreenda:hover {
   box-shadow: 0 0 14px #ffffffaa;
 }
 
-/* Páginas de temas */
+/* Páginas de temas — padrão desktop/tablet */
 h2 {
   text-align: center;
   font-size: 2.4em;
@@ -136,17 +136,17 @@ h2 {
 blockquote {
   text-align: center;
   font-style: italic;
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #ddd;
   margin: 30px auto;
   max-width: 800px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .consolo {
   text-align: center;
   margin-top: 30px;
-  font-size: 1.5em;
+  font-size: 1.7em;
   color: #fff;
   max-width: 800px;
   margin-left: auto;
@@ -171,7 +171,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsivo para celular */
+/* Responsivo para celular — textos e botões menores */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.8em;
@@ -187,23 +187,27 @@ a:hover {
     padding: 0 15px;
   }
 
-  blockquote,
-  .consolo,
   h2 {
     font-size: 1.4em;
     padding: 0 20px;
     line-height: 1.7;
   }
 
-  .botoes {
-    flex-direction: column;
-    gap: 10px;
+  blockquote {
+    font-size: 1.4em;
     padding: 0 20px;
+    line-height: 1.7;
+  }
+
+  .consolo {
+    font-size: 1.4em;
+    padding: 0 20px;
+    line-height: 1.7;
   }
 
   button {
     width: 100%;
-    font-size: 17px;
+    font-size: 16px;
     padding: 14px 22px;
   }
 }
