@@ -1,0 +1,60 @@
+section.topico {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+section.topico h2 {
+  font-size: 2.6em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #000;
+}
+
+section.topico blockquote {
+  font-size: 1.9em;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 20px auto;
+  color: #ddd;
+}
+
+section.topico .consolo {
+  font-size: 1.8em;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 20px auto 30px;
+}
+
+section.topico button,
+section.topico a {
+  font-size: 18px;
+  padding: 16px 28px;
+  border-radius: 8px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Ajuste exclusivo para celular */
+@media (max-width: 768px) {
+  section.topico h2 {
+    font-size: 2.2em;
+  }
+  section.topico blockquote {
+    font-size: 1.7em;
+  }
+  section.topico .consolo {
+    font-size: 1.6em;
+  }
+  section.topico button,
+  section.topico a {
+    width: 100%;
+    max-width: 300px;
+    font-size: 17px;
+    padding: 14px 22px;
+  }
+}
