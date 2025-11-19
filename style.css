@@ -35,30 +35,23 @@ body {
   box-sizing: border-box;
 }
 
-/* Estado inicial */
+/* Elementos visíveis por padrão */
 .hero-title,
 .scroll-down,
 .intro,
 .subintro,
 .botoes button {
-  opacity: 1; /* visível por padrão */
+  opacity: 1;
   transform: translateY(0);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Quando entra na tela (com animação) */
+/* Quando entram na tela com animação */
 .animate.hero-title { animation: slideDown 1s ease forwards; }
 .animate.scroll-down { animation: fadeUp 1s ease forwards; }
 .animate.intro { animation: slideLeft 1s ease forwards; }
 .animate.subintro { animation: slideRight 1s ease forwards; }
 .animate.botoes button { animation: zoomIn 0.8s ease forwards; }
-
-
-/* Classe aplicada pelo JS quando entra na tela */
-.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Hero title */
 .hero-title {
@@ -147,7 +140,7 @@ button.surpreenda:hover {
   box-shadow: 0 0 14px #ffffffaa;
 }
 
-/* Keyframes para animações */
+/* Keyframes */
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-50px); }
   to { opacity: 1; transform: translateY(0); }

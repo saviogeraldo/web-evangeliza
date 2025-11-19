@@ -49,4 +49,19 @@ function compartilhar() {
   }
 }
 
+// Intersection Observer para animar elementos ao entrar na tela
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+    } else {
+      entry.target.classList.remove("animate"); // remove ao sair da tela
+    }
+  });
+}, { threshold: 0.2 });
+
+// Seleciona os elementos que terão animação
+document.querySelectorAll(
+  ".hero-title, .scroll-down, .intro, .subintro, .botoes button"
+).forEach(el => observer.observe(el));
 
