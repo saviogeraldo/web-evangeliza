@@ -1,19 +1,23 @@
 const versiculosPorPalavra = {
+  "tristeza": [
+    "Salmos 34:18 – Perto está o Senhor dos que têm o coração quebrantado e salva os contritos de espírito.",
+    "Mateus 5:4 – Bem-aventurados os que choram, porque eles serão consolados."
+  ],
+  "culpa": [
+    "1 João 1:9 – Se confessarmos os nossos pecados, ele é fiel e justo para nos perdoar e nos purificar de toda injustiça.",
+    "Romanos 8:1 – Portanto, agora nenhuma condenação há para os que estão em Cristo Jesus."
+  ],
   "fe": [
     "Hebreus 11:1 – Ora, a fé é o firme fundamento das coisas que se esperam, e a prova das coisas que se não veem.",
     "Romanos 10:17 – De sorte que a fé é pelo ouvir, e o ouvir pela palavra de Deus."
   ],
-  "amor": [
-    "1 Coríntios 13:4 – O amor é sofredor, é benigno; o amor não é invejoso; o amor não trata com leviandade, não se ensoberbece.",
-    "João 3:16 – Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna."
-  ],
   "esperanca": [
-    "Romanos 15:13 – Ora, o Deus de esperança vos encha de todo o gozo e paz em crença, para que abundeis em esperança pela virtude do Espírito Santo.",
-    "Salmos 42:11 – Por que estás abatida, ó minha alma, e por que te perturbas dentro de mim? Espera em Deus, pois ainda o louvarei, ele é a salvação da minha face e o meu Deus."
+    "Romanos 15:13 – Ora, o Deus de esperança vos encha de todo o gozo e paz em crença...",
+    "Salmos 42:11 – Por que estás abatida, ó minha alma? Espera em Deus..."
   ],
   "perdao": [
-    "Efésios 4:32 – Antes sede uns para com os outros benignos, misericordiosos, perdoando-vos uns aos outros, como também Deus vos perdoou em Cristo.",
-    "Mateus 6:14 – Porque, se perdoardes aos homens as suas ofensas, também vosso Pai celestial vos perdoará a vós."
+    "Efésios 4:32 – Antes sede uns para com os outros benignos, misericordiosos, perdoando-vos uns aos outros...",
+    "Mateus 6:14 – Porque, se perdoardes aos homens as suas ofensas, também vosso Pai celestial vos perdoará."
   ],
   "alegria": [
     "Filipenses 4:4 – Regozijai-vos sempre no Senhor; outra vez digo, regozijai-vos.",
@@ -21,18 +25,22 @@ const versiculosPorPalavra = {
   ],
   "vida": [
     "João 10:10 – Eu vim para que tenham vida, e a tenham com abundância.",
-    "Provérbios 4:23 – Sobre tudo o que se deve guardar, guarda o teu coração, porque dele procedem as fontes da vida."
+    "Provérbios 4:23 – Sobre tudo o que se deve guardar, guarda o teu coração..."
   ]
 };
 
 const consolosPorPalavra = {
+  "tristeza": [
+    "Deus enxuga cada lágrima. Você não está sozinho.",
+    "Mesmo na dor, há consolo em Deus. Ele te sustenta."
+  ],
+  "culpa": [
+    "Deus já te perdoou. Receba a paz que vem do perdão.",
+    "A graça de Deus cobre toda culpa. Você é livre."
+  ],
   "fe": [
     "Continue acreditando, mesmo quando não vê. Deus honra a fé que persevera.",
     "A fé te sustenta quando tudo parece incerto. Confie, Deus está no controle."
-  ],
-  "amor": [
-    "O amor de Deus é incondicional. Você é profundamente amado.",
-    "Deus te ama com amor eterno. Nada pode separar você desse amor."
   ],
   "esperanca": [
     "Mesmo nos dias difíceis, há esperança em Deus. Ele não te abandona.",
@@ -63,27 +71,24 @@ function normalizarTexto(texto) {
     .trim();
 }
 
-function buscar() {
-  const entradaBruta = document.getElementById("entrada").value;
-  const palavra = normalizarTexto(entradaBruta);
+function buscar(palavraBruta) {
+  const palavra = normalizarTexto(palavraBruta);
 
   const resultados = versiculosPorPalavra[palavra];
   const consolos = consolosPorPalavra[palavra];
 
   if (!resultados || !consolos) {
-    document.getElementById("versiculo").innerText = "Nenhum versículo encontrado com essa palavra.";
-    document.getElementById("consolo").innerText = "Tente outra palavra como: fé, amor, esperança...";
+    document.getElementById("versiculo").innerText = "Nenhum versículo encontrado com esse tema.";
+    document.getElementById("consolo").innerText = "Tente outro tópico como: fé, esperança, perdão...";
     return;
   }
 
-  // Versículo aleatório diferente do anterior
   const candidatosVerso = resultados.filter(v => v !== ultimoVersiculo);
   const escolhidoVerso = candidatosVerso.length > 0
     ? candidatosVerso[Math.floor(Math.random() * candidatosVerso.length)]
     : resultados[Math.floor(Math.random() * resultados.length)];
   ultimoVersiculo = escolhidoVerso;
 
-  // Consolo aleatório diferente do anterior
   const candidatosConsolo = consolos.filter(c => c !== ultimoConsolo);
   const escolhidoConsolo = candidatosConsolo.length > 0
     ? candidatosConsolo[Math.floor(Math.random() * candidatosConsolo.length)]
@@ -99,7 +104,7 @@ function compartilharWhatsApp() {
   const consolo = document.getElementById("consolo").innerText;
 
   if (!versiculo || !consolo) {
-    alert("Busque uma palavra primeiro para compartilhar.");
+    alert("Escolha um tema primeiro para compartilhar.");
     return;
   }
 
