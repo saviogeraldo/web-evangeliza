@@ -2,30 +2,27 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Evangeliza Web</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Evangeliza Web</h1>
-  <p>Escolha um tema que represente o que você está sentindo:</p>
+  <header>
+    <h1 class="intro">O céu se aproxima e a graça te alcança. Receba a Palavra que ilumina e transforma corações. Pois é chegado o Reino dos Céus.</h1>
+    <p class="subintro">Palavras para sua alma: fé, esperança, culpa, tristeza, perdão, coração quebrantado…</p>
+  </header>
 
-  <div>
-    <button onclick="buscar('tristeza')">Tristeza</button>
-    <button onclick="buscar('culpa')">Culpa</button>
-    <button onclick="buscar('fe')">Fé</button>
-    <button onclick="buscar('esperanca')">Esperança</button>
-    <button onclick="buscar('perdao')">Perdão</button>
-    <button onclick="buscar('alegria')">Alegria</button>
-    <button onclick="buscar('vida')">Vida</button>
-  </div>
-
-  <br />
-
-  <button onclick="buscarAleatorio()">Surpreenda-me</button>
-
-  <button onclick="compartilharWhatsApp()">Compartilhar no WhatsApp</button>
-
-  <div id="versiculo"></div>
-  <div id="consolo"></div>
+  <main>
+    <div class="botoes">
+      <button onclick="abrirTema('fe')">Fé</button>
+      <button onclick="abrirTema('esperanca')">Esperança</button>
+      <button onclick="abrirTema('culpa')">Culpa</button>
+      <button onclick="abrirTema('tristeza')">Tristeza</button>
+      <button onclick="abrirTema('perdao')">Perdão</button>
+      <button onclick="abrirTema('coracao-quebrantado')">Coração Quebrantado</button>
+      <button onclick="abrirTemaAleatorio()">Surpreenda-me</button>
+    </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
