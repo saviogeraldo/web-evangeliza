@@ -15,35 +15,32 @@ body {
   color: #fff;
 }
 
-/* Hero: imagem de entrada */
+/* Hero: tela inicial */
 .hero {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;      /* fallback */
+  height: 100dvh;     /* altura dinâmica (Android + iOS modernos) */
+  width: 100%;
   background-color: #000000ee;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
   text-align: center;
-  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .hero-title {
   font-size: 4em;
+  line-height: 1.2;
+  margin: 0;
   color: #fff;
   text-shadow: 0 0 10px #000, 0 0 20px #000;
-  margin: 0;
 }
 
 /* Ícone de rolagem */
@@ -164,7 +161,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsivo para celular */
+/* Responsivo para celular (Android + iOS) */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.8em;
