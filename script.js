@@ -31,3 +31,17 @@ function abrirTemaAleatorio() {
   const aleatorio = temasDisponiveis[Math.floor(Math.random() * temasDisponiveis.length)];
   abrirTema(aleatorio);
 }
+
+function compartilhar() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      text: "Confira esta mensagem: " + document.querySelector("blockquote").innerText,
+      url: window.location.href
+    })
+    .then(() => console.log("Compartilhado com sucesso!"))
+    .catch((error) => console.log("Erro ao compartilhar:", error));
+  } else {
+    alert("Compartilhamento não suportado neste navegador.");
+  }
+}
