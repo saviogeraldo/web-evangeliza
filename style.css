@@ -66,9 +66,10 @@ body {
 }
 
 .filtro-escuro {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+  backdrop-filter: blur(2px);
   padding: 40px 20px;
-  color: #fff;
+  color: #ffffffd4;
   text-align: center;
 }
 
