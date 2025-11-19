@@ -12,17 +12,17 @@ section.topico {
   overflow: hidden;
 }
 
-/* Título do tópico */
+/* Título do tópico - desliza da esquerda */
 section.topico h2 {
   font-size: clamp(1.6em, 4vw, 2.2em);
   margin: 0;
   text-shadow: 0 0 6px #000;
   opacity: 0;
-  animation: fadeUp 1s ease forwards;
+  animation: slideLeft 1s ease forwards;
   animation-delay: 0.2s;
 }
 
-/* Versículo */
+/* Versículo - desliza da direita */
 section.topico blockquote {
   font-size: clamp(1.2em, 3.5vw, 1.6em);
   line-height: 1.5;
@@ -30,11 +30,11 @@ section.topico blockquote {
   margin: 0 auto;
   color: #ddd;
   opacity: 0;
-  animation: fadeUp 1s ease forwards;
+  animation: slideRight 1s ease forwards;
   animation-delay: 0.4s;
 }
 
-/* Texto de reflexão/consolo */
+/* Texto de reflexão/consolo - sobe suavemente */
 section.topico .consolo {
   font-size: clamp(1.1em, 3vw, 1.4em);
   line-height: 1.5;
@@ -45,7 +45,7 @@ section.topico .consolo {
   animation-delay: 0.6s;
 }
 
-/* Botão de compartilhar */
+/* Botão de compartilhar - aparece com zoom */
 section.topico button {
   font-size: clamp(0.9em, 2.5vw, 1.1em);
   padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 24px);
@@ -55,7 +55,7 @@ section.topico button {
   border: none;
   cursor: pointer;
   opacity: 0;
-  animation: fadeUp 1s ease forwards;
+  animation: zoomIn 1s ease forwards;
   animation-delay: 0.8s;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -65,7 +65,7 @@ section.topico button:hover {
   box-shadow: 0 0 8px #00ff8855;
 }
 
-/* Link de voltar */
+/* Link de voltar - aparece com zoom */
 section.topico a {
   display: inline-block;
   font-size: clamp(0.9em, 2.5vw, 1.1em);
@@ -75,7 +75,7 @@ section.topico a {
   color: #fff;
   text-decoration: none;
   opacity: 0;
-  animation: fadeUp 1s ease forwards;
+  animation: zoomIn 1s ease forwards;
   animation-delay: 1s;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -85,19 +85,84 @@ section.topico a:hover {
   box-shadow: 0 0 8px #3399ff55;
 }
 
-/* Animação de entrada */
+/* Animações */
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* Scroll suave entre seções */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Estado inicial */
+section.topico h2,
+section.topico blockquote,
+section.topico .consolo,
+section.topico button,
+section.topico a {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Classe aplicada quando entra na tela */
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efeitos diferenciados */
+section.topico h2.animate {
+  animation: slideLeft 1s ease forwards;
+}
+section.topico blockquote.animate {
+  animation: slideRight 1s ease forwards;
+}
+section.topico .consolo.animate {
+  animation: fadeUp 1s ease forwards;
+}
+section.topico button.animate,
+section.topico a.animate {
+  animation: zoomIn 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Scroll suave */
 html {
   scroll-behavior: smooth;
 }
