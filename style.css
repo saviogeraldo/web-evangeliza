@@ -1,15 +1,15 @@
-/* Zera margens e bordas */
 html, body {
   margin: 0;
   padding: 0;
-  border: none;
   height: 100%;
+  width: 100%;
 }
 
-/* Fundo fixo com imagem principal */
 body {
   background: url('/img/imgem-principal.jpeg') no-repeat center center fixed;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Hero: imagem de entrada */
@@ -25,27 +25,26 @@ body {
   display: none; /* já usamos como fundo no body */
 }
 
-/* Sobreposição de título e ícone */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
+  z-index: 2;
 }
 
 .hero-title {
   font-size: 3em;
   color: #fff;
   text-shadow: 0 0 10px #000, 0 0 20px #000;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 .scroll-down {
