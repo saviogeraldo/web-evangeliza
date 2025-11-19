@@ -6,7 +6,7 @@ html, body {
 }
 
 body {
-  background: url('/img/imagem-principal.jpeg') no-repeat center center fixed;
+  background: url('img/imagem-principal.jpeg') no-repeat center center fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
