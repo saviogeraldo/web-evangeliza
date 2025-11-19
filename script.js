@@ -45,3 +45,4 @@ function compartilhar() {
     alert("Compartilhamento não suportado neste navegador.");
   }
 }
+
