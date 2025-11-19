@@ -40,7 +40,7 @@ body {
 }
 
 .hero-title {
-  font-size: 3.5em;
+  font-size: 4em;
   color: #fff;
   text-shadow: 0 0 10px #000, 0 0 20px #000;
   margin: 0;
@@ -75,14 +75,14 @@ body {
 
 /* Título e subtítulo */
 .intro {
-  font-size: 1.8em;
+  font-size: 2em;
   margin-bottom: 10px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
                0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .subintro {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin-bottom: 30px;
 }
 
@@ -99,12 +99,12 @@ button {
   background: #444;
   color: #fff;
   border: none;
-  padding: 14px 28px;
-  font-size: 17px;
+  padding: 16px 32px;
+  font-size: 18px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  width: 240px;
+  width: 260px;
 }
 
 button:hover {
@@ -127,7 +127,7 @@ button.surpreenda:hover {
 /* Páginas de temas */
 h2 {
   text-align: center;
-  font-size: 2.2em;
+  font-size: 2.4em;
   color: #fff;
   margin-bottom: 20px;
   text-shadow: 0 0 8px #000;
@@ -136,22 +136,22 @@ h2 {
 blockquote {
   text-align: center;
   font-style: italic;
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: #ddd;
   margin: 30px auto;
   max-width: 800px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .consolo {
   text-align: center;
   margin-top: 30px;
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: #fff;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* Botão compartilhar e link voltar */
@@ -174,25 +174,25 @@ a:hover {
 /* Responsivo para celular */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.4em;
+    font-size: 2.8em;
   }
 
   .intro {
-    font-size: 1.5em;
+    font-size: 1.6em;
     padding: 0 15px;
   }
 
   .subintro {
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding: 0 15px;
   }
 
   blockquote,
   .consolo,
   h2 {
-    font-size: 1.3em;
+    font-size: 1.4em;
     padding: 0 20px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .botoes {
@@ -203,7 +203,7 @@ a:hover {
 
   button {
     width: 100%;
-    font-size: 16px;
-    padding: 12px 20px;
+    font-size: 17px;
+    padding: 14px 22px;
   }
 }
