@@ -173,41 +173,45 @@ a:hover {
 
 /* Responsivo para celular — textos e botões menores */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.8em;
+  section.topico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
   }
 
-  .intro {
-    font-size: 1.6em;
-    padding: 0 15px;
+  section.topico h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  .subintro {
-    font-size: 1.3em;
-    padding: 0 15px;
-  }
-
-  h2 {
-    font-size: 1.4em;
+  section.topico blockquote {
+    font-size: 1.8em;
+    line-height: 1.8;
+    text-align: center;
     padding: 0 20px;
-    line-height: 1.7;
+    max-width: 800px;
+    margin: 30px auto;
   }
 
-  blockquote {
-    font-size: 1.4em;
+  section.topico .consolo {
+    font-size: 1.7em;
+    line-height: 1.8;
+    text-align: center;
     padding: 0 20px;
-    line-height: 1.7;
+    max-width: 800px;
+    margin: 30px auto;
   }
 
-  .consolo {
-    font-size: 1.4em;
-    padding: 0 20px;
-    line-height: 1.7;
-  }
-
-  button {
+  section.topico button {
+    font-size: 18px;
+    padding: 16px 32px;
     width: 100%;
-    font-size: 16px;
-    padding: 14px 22px;
+    max-width: 260px;
+    margin: 20px auto;
   }
 }
