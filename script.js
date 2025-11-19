@@ -112,3 +112,9 @@ function compartilharWhatsApp() {
   const link = `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
   window.open(link, "_blank");
 }
+
+function buscarAleatorio() {
+  const temas = Object.keys(versiculosPorPalavra);
+  const temaAleatorio = temas[Math.floor(Math.random() * temas.length)];
+  buscar(temaAleatorio);
+}
