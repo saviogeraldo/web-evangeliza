@@ -7,20 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1 class="intro">O céu se aproxima e a graça te alcança. Receba a Palavra que ilumina e transforma corações. Pois é chegado o Reino dos Céus.</h1>
-    <p class="subintro">Palavras para sua alma:</p>
-  </header>
+  <!-- Hero: imagem principal com título e ícone -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1 class="hero-title">EVANGELIZA WEB</h1>
+      <a href="#conteudo" class="scroll-down">↓</a>
+    </div>
+    <img src="/img/imgem-principal.jpeg" alt="Evangeliza Web - imagem de entrada" />
+  </section>
 
-  <main>
-    <div class="botoes">
-      <button class="surpreenda" onclick="abrirTemaAleatorio()">Surpreenda-me</button>
-      <button onclick="abrirTema('fe')">Fé</button>
-      <button onclick="abrirTema('esperanca')">Esperança</button>
-      <button onclick="abrirTema('culpa')">Culpa</button>
-      <button onclick="abrirTema('tristeza')">Tristeza</button>
-      <button onclick="abrirTema('perdao')">Perdão</button>
-      <button onclick="abrirTema('coracao-quebrantado')">Coração Quebrantado</button>
+  <!-- Conteúdo principal com fundo transparente sobre imagem -->
+  <main class="conteudo" id="conteudo">
+    <div class="filtro-escuro">
+      <header>
+        <h2 class="intro">O céu se aproxima e a graça te alcança. Receba a Palavra que ilumina e transforma corações. Pois é chegado o Reino dos Céus.</h2>
+        <p class="subintro">Palavras para este dia:</p>
+      </header>
+
+      <div class="botoes">
+        <button class="surpreenda" onclick="abrirTemaAleatorio()">Surpreenda-me</button>
+        <button onclick="abrirTema('fe')">Fé</button>
+        <button onclick="abrirTema('esperanca')">Esperança</button>
+        <button onclick="abrirTema('culpa')">Culpa</button>
+        <button onclick="abrirTema('tristeza')">Tristeza</button>
+        <button onclick="abrirTema('perdao')">Perdão</button>
+        <button onclick="abrirTema('coracao-quebrantado')">Coração Quebrantado</button>
+      </div>
     </div>
   </main>
 
