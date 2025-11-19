@@ -15,34 +15,38 @@ body {
   color: #fff;
 }
 
-/* Hero: tela inicial */
+/* Hero: imagem de entrada */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;      /* fallback */
-  height: 100dvh;     /* altura dinâmica (Android + iOS modernos) */
-  width: 100%;
-  background-color: #000000ee;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
   overflow: hidden;
-  box-sizing: border-box;
+  background-color: #000000ee;
 }
 
 .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px;
-  width: 100%;
-  max-width: 800px;
+  box-sizing: border-box;
 }
 
 .hero-title {
   font-size: 4em;
-  line-height: 1.2;
-  margin: 0;
   color: #fff;
   text-shadow: 0 0 10px #000, 0 0 20px #000;
+  margin: 0;
 }
 
+/* Ícone de rolagem */
 .scroll-down {
   font-size: 2em;
   color: #fff;
@@ -123,7 +127,7 @@ button.surpreenda:hover {
 /* Páginas de temas */
 h2 {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.4em;
   color: #fff;
   margin-bottom: 20px;
   text-shadow: 0 0 8px #000;
@@ -132,24 +136,22 @@ h2 {
 blockquote {
   text-align: center;
   font-style: italic;
-  font-size: 1.8em;
+  font-size: 1.5em;
   color: #ddd;
   margin: 30px auto;
-  max-width: 900px;
-  line-height: 1.8;
-  padding: 0 25px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 
 .consolo {
   text-align: center;
   margin-top: 30px;
-  font-size: 1.7em;
+  font-size: 1.5em;
   color: #fff;
-  max-width: 900px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.8;
-  padding: 0 25px;
 }
 
 /* Botão compartilhar e link voltar */
@@ -185,20 +187,12 @@ a:hover {
     padding: 0 15px;
   }
 
+  blockquote,
+  .consolo,
   h2 {
-    font-size: 1.8em;
-  }
-
-  blockquote {
-    font-size: 1.6em;
-    line-height: 1.7;
+    font-size: 1.4em;
     padding: 0 20px;
-  }
-
-  .consolo {
-    font-size: 1.6em;
     line-height: 1.7;
-    padding: 0 20px;
   }
 
   .botoes {
