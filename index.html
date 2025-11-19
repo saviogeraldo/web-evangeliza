@@ -6,6 +6,24 @@
   <title>Evangeliza Web</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      } else {
+        entry.target.classList.remove("animate");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(
+    ".hero-title, .scroll-down, .intro, .subintro, .botoes button"
+  ).forEach(el => observer.observe(el));
+</script>
+
+
 <body>
   <!-- Hero: imagem principal com título e ícone -->
   <section class="hero">

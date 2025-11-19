@@ -9,13 +9,11 @@ html, body {
 body {
   background: url('img/imagem-principal.jpeg') no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   font-family: 'Arial', sans-serif;
   color: #fff;
 }
 
-/* Hero: imagem de entrada */
+/* Hero */
 .hero {
   height: 100vh;
   width: 100vw;
@@ -26,10 +24,8 @@ body {
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
+  top: 0; left: 0;
+  height: 100vh; width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,16 +35,38 @@ body {
   box-sizing: border-box;
 }
 
-/* Título principal com animação */
+/* Estado inicial */
+.hero-title,
+.scroll-down,
+.intro,
+.subintro,
+.botoes button {
+  opacity: 1; /* visível por padrão */
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando entra na tela (com animação) */
+.animate.hero-title { animation: slideDown 1s ease forwards; }
+.animate.scroll-down { animation: fadeUp 1s ease forwards; }
+.animate.intro { animation: slideLeft 1s ease forwards; }
+.animate.subintro { animation: slideRight 1s ease forwards; }
+.animate.botoes button { animation: zoomIn 0.8s ease forwards; }
+
+
+/* Classe aplicada pelo JS quando entra na tela */
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero title */
 .hero-title {
   font-size: 8vw;
   line-height: 1.2;
   margin: 0;
   color: #fff;
   text-shadow: 0 0 10px #000, 0 0 20px #000;
-  opacity: 0;
-  animation: slideDown 1s ease forwards;
-  animation-delay: 0.3s;
 }
 
 /* Ícone de rolagem */
@@ -57,9 +75,7 @@ body {
   color: #fff;
   text-decoration: none;
   margin-top: 20px;
-  opacity: 0;
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 1s;
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -67,7 +83,7 @@ body {
   50% { opacity: 0.5; }
 }
 
-/* Conteúdo geral */
+/* Conteúdo */
 .conteudo {
   position: relative;
   z-index: 3;
@@ -80,26 +96,20 @@ body {
   text-align: center;
 }
 
-/* Título e subtítulo com animação */
+/* Intro e subintro */
 .intro {
   font-size: 2em;
   margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
-               0 0 20px rgba(255, 255, 255, 0.2);
-  opacity: 0;
-  animation: slideLeft 1s ease forwards;
-  animation-delay: 0.5s;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3),
+               0 0 20px rgba(255,255,255,0.2);
 }
 
 .subintro {
   font-size: 1.4em;
   margin-bottom: 30px;
-  opacity: 0;
-  animation: slideRight 1s ease forwards;
-  animation-delay: 0.7s;
 }
 
-/* Botões com animação em sequência */
+/* Botões */
 .botoes {
   display: flex;
   flex-direction: column;
@@ -118,18 +128,7 @@ button {
   cursor: pointer;
   transition: background 0.3s ease, box-shadow 0.3s ease;
   width: 260px;
-  opacity: 0;
-  transform: scale(0.8);
-  animation: zoomIn 0.8s ease forwards;
 }
-
-.botoes button:nth-child(1) { animation-delay: 1s; }
-.botoes button:nth-child(2) { animation-delay: 1.2s; }
-.botoes button:nth-child(3) { animation-delay: 1.4s; }
-.botoes button:nth-child(4) { animation-delay: 1.6s; }
-.botoes button:nth-child(5) { animation-delay: 1.8s; }
-.botoes button:nth-child(6) { animation-delay: 2s; }
-.botoes button:nth-child(7) { animation-delay: 2.2s; }
 
 button:hover {
   background: #666;
@@ -148,99 +147,7 @@ button.surpreenda:hover {
   box-shadow: 0 0 14px #ffffffaa;
 }
 
-/* Páginas de temas */
-h2 {
-  text-align: center;
-  font-size: 2.4em;
-  color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 0 0 8px #000;
-}
-
-blockquote {
-  text-align: center;
-  font-style: italic;
-  font-size: 1.8em;
-  color: #ddd;
-  margin: 30px auto;
-  max-width: 800px;
-  line-height: 1.8;
-}
-
-.consolo {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 1.7em;
-  color: #fff;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.8;
-}
-
-/* Botão compartilhar e link voltar */
-button, a {
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  section.topico {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 40px 20px;
-    box-sizing: border-box;
-  }
-
-  section.topico h2 {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  section.topico blockquote {
-    font-size: 1.8em;
-    line-height: 1.8;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 800px;
-    margin: 30px auto;
-  }
-
-  section.topico .consolo {
-    font-size: 1.7em;
-    line-height: 1.8;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 800px;
-    margin: 30px auto;
-  }
-
-  section.topico button {
-    font-size: 18px;
-    padding: 16px 32px;
-    width: 100%;
-    max-width: 260px;
-    margin: 20px auto;
-  }
-}
-
-/* Keyframes */
+/* Keyframes para animações */
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-50px); }
   to { opacity: 1; transform: translateY(0); }
