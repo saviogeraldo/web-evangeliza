@@ -5,53 +5,70 @@ section.topico {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 50px 20px;
   box-sizing: border-box;
   text-align: center;
+  gap: 25px; /* espaçamento mais compacto */
 }
 
 /* Título do tópico */
 section.topico h2 {
-  font-size: clamp(1.8em, 5vw, 2.6em);
+  font-size: clamp(1.8em, 4.5vw, 2.4em); /* limite menor no PC */
   margin-bottom: 20px;
   text-shadow: 0 0 8px #000;
 }
 
 /* Versículo */
 section.topico blockquote {
-  font-size: clamp(1.6em, 4.5vw, 2em);
+  font-size: clamp(1.6em, 4vw, 2.1em); /* reduzido no PC */
   line-height: 1.8;
-  max-width: 900px;
+  max-width: 850px;
   margin: 20px auto;
   color: #ddd;
 }
 
 /* Texto de reflexão/consolo */
 section.topico .consolo {
-  font-size: clamp(1.5em, 4.5vw, 1.9em);
+  font-size: clamp(1.4em, 3.8vw, 1.9em); /* mais compacto */
   line-height: 1.8;
-  max-width: 900px;
+  max-width: 850px;
   margin: 20px auto 30px;
 }
 
-/* Botões e links */
-section.topico button,
-section.topico a {
-  font-size: clamp(1em, 3.5vw, 1.2em);
-  padding: clamp(12px, 3vw, 16px) clamp(18px, 5vw, 28px);
-  border-radius: 8px;
+/* Botão de compartilhar */
+section.topico button {
+  font-size: clamp(1.1em, 3vw, 1.4em); /* menor no PC */
+  padding: clamp(14px, 3vw, 20px) clamp(22px, 5vw, 30px);
+  border-radius: 10px;
   margin: 20px auto;
   text-align: center;
-  background: #444;
+  background: #2e7d32; /* verde */
   color: #fff;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.topico button:hover {
+  background: #388e3c;
+  box-shadow: 0 0 12px #00ff8855;
+}
+
+/* Link de voltar */
+section.topico a {
+  display: inline-block;
+  font-size: clamp(1.1em, 3vw, 1.4em);
+  padding: clamp(14px, 3vw, 20px) clamp(22px, 5vw, 30px);
+  border-radius: 10px;
+  margin: 20px auto;
+  text-align: center;
+  background: #1565c0; /* azul */
+  color: #fff;
   text-decoration: none;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-section.topico button:hover,
 section.topico a:hover {
-  background: #666;
-  box-shadow: 0 0 10px #ffffff33;
+  background: #1e88e5;
+  box-shadow: 0 0 12px #3399ff55;
 }
