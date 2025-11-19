@@ -42,7 +42,11 @@ function compartilhar() {
     .then(() => console.log("Compartilhado com sucesso!"))
     .catch((error) => console.log("Erro ao compartilhar:", error));
   } else {
-    alert("Compartilhamento não suportado neste navegador.");
+    // Alternativa: copiar link para área de transferência
+    navigator.clipboard.writeText(window.location.href)
+      .then(() => alert("Link copiado para compartilhar!"))
+      .catch(() => alert("Não foi possível copiar o link."));
   }
 }
+
 
