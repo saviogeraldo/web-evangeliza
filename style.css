@@ -40,11 +40,13 @@ body {
 }
 
 .hero-title {
-  font-size: 4em;
+  font-size: 8vw;   /* ocupa 8% da largura da tela */
+  line-height: 1.2;
+  margin: 0;
   color: #fff;
   text-shadow: 0 0 10px #000, 0 0 20px #000;
-  margin: 0;
 }
+
 
 /* Ícone de rolagem */
 .scroll-down {
