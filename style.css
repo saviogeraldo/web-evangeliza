@@ -153,5 +153,49 @@ button.surpreenda:hover {
   }
 }    
 
+/* Estilo para páginas de temas */
+h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #000;
+}
 
+blockquote {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #ddd;
+  margin: 20px auto;
+  max-width: 800px;
+  line-height: 1.5;
+}
 
+.consolo {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #fff;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Botão de compartilhar e link voltar */
+button, a {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
