@@ -20,7 +20,7 @@ function abrirTema(tema) {
     document.body.style.opacity = 0;
     setTimeout(() => {
       window.location.href = `temas/${tema}.html`;
-    }, 500); // tempo da transição
+    }, 500);
   } else {
     alert("Tema não encontrado.");
   }
@@ -30,14 +30,4 @@ function abrirTema(tema) {
 function abrirTemaAleatorio() {
   const aleatorio = temasDisponiveis[Math.floor(Math.random() * temasDisponiveis.length)];
   abrirTema(aleatorio);
-}
-
-function compartilhar() {
-  const titulo = document.querySelector('h2')?.innerText || '';
-  const versiculo = document.querySelector('blockquote')?.innerText || '';
-  const consolo = document.querySelector('.consolo')?.innerText || '';
-  const texto = `${titulo}\n\n${versiculo}\n\n${consolo}`;
-
-  const urlWhatsApp = `https://wa.me/?text=${encodeURIComponent(texto)}`;
-  window.open(urlWhatsApp, '_blank');
 }
