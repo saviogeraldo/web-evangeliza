@@ -165,3 +165,20 @@ button.surpreenda:hover {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* Botão Surpreenda-me em destaque */
+.btn-surpreenda {
+  background-color: #ffffff !important;  /* fundo branco */
+  color: #222222 !important;             /* texto escuro */
+  font-weight: bold;
+  border: 2px solid #222222 !important;  /* borda escura */
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-surpreenda:hover {
+  background-color: #f0f0f0 !important;  /* leve cinza ao passar o mouse */
+  color: #000000 !important;
+}

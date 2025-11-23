@@ -7,32 +7,13 @@
   <link rel="stylesheet" href="css/topicos.css" />
   <script src="../script.js"></script>
 </head>
-<body>
+<body data-tema="esperanca">
   <section class="topico">
-  <h2>Esperança</h2>
-  <blockquote>“Porque eu bem sei os pensamentos que penso de vós, diz o Senhor; pensamentos de paz, e não de mal, para vos dar o fim que esperais.” — Jeremias 29:11</blockquote>
-  <p class="consolo">A esperança em Deus não decepciona. Mesmo nos dias escuros, Ele prepara um futuro de paz para você.</p>
- 
-  <button onclick="compartilhar()">📤 Compartilhar</button>
-<a href="../index.html">Voltar</a>
-</section>
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate");
-      } else {
-        entry.target.classList.remove("animate"); // remove ao sair da tela
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll(
-    "section.topico h2, section.topico blockquote, section.topico .consolo, section.topico button, section.topico a"
-  ).forEach(el => observer.observe(el));
-</script>
-
-
+    <h2>Esperança</h2>
+    <blockquote></blockquote>
+    <p class="consolo"></p>
+    <button onclick="compartilhar()">📤 Compartilhar</button>
+    <a href="../index.html">Voltar</a>
+  </section>
 </body>
 </html>

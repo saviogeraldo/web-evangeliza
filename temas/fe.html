@@ -3,41 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <title>Fé</title>
-  <link rel="stylesheet" href="../style.css" />     <!-- estilos globais -->
-  <link rel="stylesheet" href="css/topicos.css" /> <!-- estilos compartilhados -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="css/topicos.css" />
   <script src="../script.js"></script>
 </head>
-<body>
+<body data-tema="fe">
   <section class="topico">
     <h2>Fé</h2>
-
-    <blockquote>
-      “Ora, a fé é o firme fundamento das coisas que se esperam, e a prova das coisas que se não veem.” — Hebreus 11:1
-    </blockquote>
-
-    <p class="consolo">
-      Mesmo quando tudo parece incerto, a fé nos sustenta e nos conecta ao invisível. Deus honra aqueles que confiam.
-    </p>
-
+    <blockquote></blockquote>
+    <p class="consolo"></p>
     <button onclick="compartilhar()">📤 Compartilhar</button>
     <a href="../index.html">Voltar</a>
   </section>
-
-  <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate");
-      } else {
-        entry.target.classList.remove("animate"); // remove ao sair da tela
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll(
-    "section.topico h2, section.topico blockquote, section.topico .consolo, section.topico button, section.topico a"
-  ).forEach(el => observer.observe(el));
-</script>
-
 </body>
 </html>
