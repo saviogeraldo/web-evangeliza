@@ -188,19 +188,20 @@ button.surpreenda:hover {
   position: fixed;      /* fixa na tela */
   bottom: 20px;         /* distância da borda inferior */
   right: 20px;          /* distância da borda direita */
-  display: flex;        /* coloca lado a lado */
-  gap: 12px;            /* espaço entre eles */
-  z-index: 9999;        /* fica acima dos outros elementos */
+  display: flex;
+  flex-direction: column; /* coloca um em cima do outro */
+  gap: 10px;             /* espaço entre eles */
+  z-index: 9999;
 }
 
 /* Estilo base para ambos os botões */
 .floating-buttons a {
   background-color: #ffffff;
   border-radius: 50%;
-  padding: 16px;
-  width: 60px;          /* largura fixa */
-  height: 60px;         /* altura fixa */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 12px;         /* menor padding */
+  width: 50px;           /* largura menor */
+  height: 50px;          /* altura menor */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-flex;
