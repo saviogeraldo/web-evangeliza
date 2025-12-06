@@ -168,10 +168,10 @@ button.surpreenda:hover {
 
 /* Botão Surpreenda-me em destaque */
 .btn-surpreenda {
-  background-color: #ffffff !important;  /* fundo branco */
-  color: #222222 !important;             /* texto escuro */
+  background-color: #ffffff !important;
+  color: #222222 !important;
   font-weight: bold;
-  border: 2px solid #222222 !important;  /* borda escura */
+  border: 2px solid #222222 !important;
   padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
@@ -179,6 +179,26 @@ button.surpreenda:hover {
 }
 
 .btn-surpreenda:hover {
-  background-color: #f0f0f0 !important;  /* leve cinza ao passar o mouse */
+  background-color: #f0f0f0 !important;
   color: #000000 !important;
+}
+
+/* Botão flutuante do Instagram */
+.instagram-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: #E1306C;
+  transition: all 0.3s ease;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.1);
+  background-color: #f8f8f8;
+  color: #C13584;
 }
