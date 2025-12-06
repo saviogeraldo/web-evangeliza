@@ -188,11 +188,11 @@ function mostrarVersiculoConsolo(tema) {
   document.querySelector(".consolo").innerText = item.consolo;
 }
 
-// Função para carregar versículo e consolo aleatório da categoria atual
 function carregarVersiculo() {
   const tema = document.body.getAttribute("data-tema"); // pega o tema da página
   if (temas[tema]) {
     const lista = temas[tema];
+    // Sorteia SEMPRE um aleatório, inclusive na primeira vez
     const sorteado = lista[Math.floor(Math.random() * lista.length)];
 
     document.querySelector("blockquote").textContent = sorteado.versiculo;
@@ -200,8 +200,8 @@ function carregarVersiculo() {
   }
 }
 
-// Executa ao carregar a página de tema
 window.onload = carregarVersiculo;
+
 
 
 function compartilhar() {
