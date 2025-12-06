@@ -157,7 +157,14 @@ const temas = {
       versiculo: "2 Coríntios 12:9 - Mas ele me disse: 'Minha graça é suficiente para você, pois o meu poder se aperfeiçoa na fraqueza.' Portanto, eu me gloriarei ainda mais alegremente em minhas fraquezas, para que o poder de Cristo repouse em mim.", 
       consolo: "Na sua fraqueza, o poder de Cristo se manifesta. O que parece limite se torna oportunidade para experimentar a graça infinita de Deus. É na vulnerabilidade que Ele revela Sua força e sustento." 
     }
-  ]
+  ],
+
+  sobre: [
+  {
+    versiculo: "Projeto Evangeliza Web",
+    consolo: "O Evangeliza Web nasceu no coração de jovens da EMU – Escola de Missões Urbanas, com o propósito de anunciar o Evangelho de forma criativa, acessível e relevante para os dias de hoje. Nosso desejo é que cada pessoa que acesse este espaço encontre consolo, esperança e fé através da Palavra de Deus.\n\nMais do que um site, este projeto é um ponto de encontro espiritual, onde cada versículo é uma semente lançada para transformar vidas e fortalecer corações. Somos movidos pela paixão de proclamar que o Reino dos Céus já está entre nós e que a graça de Cristo continua a alcançar pessoas em todos os lugares.\n\nCada acesso é um convite para experimentar a presença de Deus e ser renovado pela Sua Palavra. Junte-se a nós nessa missão de evangelização digital e compartilhe a luz que nunca se apaga."
+  }
+]
 };
 
 

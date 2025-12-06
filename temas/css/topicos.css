@@ -131,3 +131,67 @@ section.topico a.animate { animation: zoomIn 1s ease forwards; }
 html {
   scroll-behavior: smooth;
 }
+
+/* Bloco especial para o Sobre Nós */
+.sobre-bloco {
+  background-color: #000;   /* fundo preto */
+  color: #fff;              /* texto branco */
+  text-align: justify;      /* texto justificado */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.sobre-bloco h2 {
+  color: #fff;              /* título branco */
+  margin-bottom: 20px;
+}
+
+.sobre-bloco blockquote {
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.sobre-bloco .consolo {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Botões dentro do bloco */
+.sobre-bloco button,
+.sobre-bloco a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botão Compartilhar */
+.sobre-bloco button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.sobre-bloco button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Botão Voltar */
+.sobre-bloco a {
+  background-color: #E1306C;
+  color: #fff;
+}
+.sobre-bloco a:hover {
+  background-color: #C13584;
+  transform: scale(1.05);
+}

@@ -1,0 +1,59 @@
+/* Container especial para o Sobre Nós */
+.sobre-container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  color: #fff;              /* texto branco */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+  text-align: justify;      /* texto justificado */
+}
+
+/* Título */
+.sobre-container h2 {
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  color: #9d00ff; /* dourado para destacar */
+  text-align: center;
+}
+
+/* Blockquote */
+.sobre-container blockquote {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-bottom: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Texto principal */
+.sobre-container .consolo {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+/* Container do botão voltar */
+.voltar-container {
+  text-align: center; /* centraliza o botão */
+  margin-top: 30px;
+}
+
+/* Botão Voltar */
+.voltar-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #e130de;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.voltar-button:hover {
+  background-color: #C13584;
+  transform: scale(1.05);
+}

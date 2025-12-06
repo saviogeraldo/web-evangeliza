@@ -183,6 +183,80 @@ button.surpreenda:hover {
   color: #000000 !important;
 }
 
+/* Botão flutuante Sobre Nós */
+.sobre-icon {
+  position: fixed;
+  bottom: 80px;          /* acima do Instagram */
+  right: 20px;
+  z-index: 9999;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: #222222;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre-icon:hover {
+  transform: scale(1.1);
+  background-color: #f8f8f8;
+  color: #444444;
+}
+
+/* Botão flutuante Sobre Nós */
+.sobre-icon {
+  position: fixed;
+  bottom: 80px;          /* acima do Instagram */
+  right: 20px;
+  z-index: 9999;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: #222222;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre-icon:hover {
+  transform: scale(1.1);
+  background-color: #f8f8f8;
+  color: #444444;
+}
+
+/* Página Sobre Nós */
+.sobre-nos {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.sobre-nos h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #E1306C;
+}
+
+.sobre-nos p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+
 /* Botão flutuante do Instagram */
 .instagram-icon {
   position: fixed;
